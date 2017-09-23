@@ -59,15 +59,7 @@
 
 
     <div class="col-sm-6">
-      <h4><small>英語脳からTOEIC対策へ</small></h4>
-      <hr>
-      <h2>TOEICの勉強方法</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by Sheen, Sep 22, 2017.</h5>
-      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      <%= render 'shared/toeic1' %>
-      
-      <% @blogs.each do |blog| %>
-           <h2><small><%= blog.title %></small></h2>
+      <h2><small><%= blog.title %></small></h2>
            <h5><span class="glyphicon glyphicon-time"></span> Post by Sheen, Sep 22, 2017.</h5>
       <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
            <%= blog.content %></br>
