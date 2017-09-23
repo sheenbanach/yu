@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+  
+<%= render 'shared/nav' %>
+<div class="container">
+  <div class="jumbotron">
+    <h1>宇宙旅行</h1>      
+    <p>宇宙旅行をマスターして辞書を使わない英語ライフを送ろう</p>
+  </div>
+</div>
+
+<div class="row">
+<div class="col-sm-9">
+  <div class="w3-container">
+
+  
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'London')">宇宙旅行</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Paris')">Paris</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Tokyo</button>
+  </div>
+  
+  <div class="row">
+<div class="col-sm-4">
+  <h2>目次</h2>
+    <nav id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">☆宇宙旅行達成☆</a></li>
+        <li><a href="#section2">0.宇宙旅行スタート</a></li>
+        <li><a href="#section3">1.お題の設定</a></li>
+        <li><a href="#section2">2.日本語で説明してみよう</a></li>
+        <li><a href="#section3">3.知っている英単語をあげてみよう</a></li>
+        <li><a href="#section2">4.英単語と画像検索してみよう</a></li>
+        <li><a href="#section3">5.出てきた画像と自分のイメージを比較してみよう</a></li>
+        <li><a href="#section2">6.ほうれん草の画像がないか探してみよう</a></li>
+        <li><a href="#section3">7.検索単語を調整してみよう</a></li>
+        <li><a href="#section2">8.確信を持った英単語の画像検索をしてみよう</a></li>
+        <li><a href="#section3">9.宇宙旅行達成</a></li>
+      </ul>
+    </nav>
+    </div>
+<div class="col-sm-8">
+  <div id="London" class="w3-container w3-border city">
+
+    <%= render 'shared/goal' %>
+<%= render 'shared/space' %> 
+  </div>
+
+  <div id="Paris" class="w3-container w3-border city" style="display:none">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p> 
+  </div>
+
+  <div id="Tokyo" class="w3-container w3-border city" style="display:none">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+  </div>
+  </div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+</div>
+</div>
+  <div class="col-sm-3"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Try to give you good explanations<br>coming to takao mountain <a href="https://t.co/mxiNC5h09B">pic.twitter.com/mxiNC5h09B</a></p>&mdash; 英語脳を生成しましょう (@englsihsheen) <a href="https://twitter.com/englsihsheen/status/909626708499718145">September 18, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Is it possible that your fried can be your teacher or not ? <a href="https://t.co/vMMMKLDAQX">https://t.co/vMMMKLDAQX</a></p>&mdash; 英語脳を生成しましょう (@englsihsheen) <a href="https://twitter.com/englsihsheen/status/898488781728235520">August 18, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr">#GoLive#English#Japan#英語脳<br>教育論について語りましょう。 <a href="https://t.co/dd2UuNapZr">https://t.co/dd2UuNapZr</a></p>&mdash; 英語脳を生成しましょう (@englsihsheen) <a href="https://twitter.com/englsihsheen/status/898131028715290626">August 17, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+</div>
+</body>
+</html>
