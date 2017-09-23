@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: db45meith
+  api_key: '197752851698984'
+  api_secret: 5XtSFGKZLoUJVXiUuTMjcPf2A40
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: db45meith
+  api_key: '197752851698984'
+  api_secret: 5XtSFGKZLoUJVXiUuTMjcPf2A40
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: db45meith
+  api_key: '197752851698984'
+  api_secret: 5XtSFGKZLoUJVXiUuTMjcPf2A40
+  enhance_image_tag: true
+  static_image_support: false

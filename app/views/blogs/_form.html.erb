@@ -20,6 +20,8 @@
     <%= form.label :content %>
     <%= form.text_area :content, id: :blog_content %>
   </div>
+<legend>Image</legend>
+<%= form.file_field :image %>
 
   <div class="actions">
     <%= form.submit %>
