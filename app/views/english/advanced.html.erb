@@ -59,7 +59,8 @@
 
 
     <div class="col-sm-6">
-      <h2><small><%= blog.title %></small></h2>
+      <% @blogs.reverse_each do |blog| %>
+           <h2><small><%= blog.title %></small></h2>
            <h5><span class="glyphicon glyphicon-time"></span> Post by Sheen, Sep 22, 2017.</h5>
       <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
            <%= blog.content %></br>
