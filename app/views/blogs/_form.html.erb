@@ -1,4 +1,7 @@
-<%= form_for @blog, :html => {:multipart => true} do |form| %>
+
+  <%= stylesheet_link_tag    "blogs", :media => "all" %>
+  
+  <%= form_for @blog, :html => {:multipart => true} do |form| %>
   <% if blog.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
@@ -18,7 +21,7 @@
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content, id: :blog_content %>
+    <%=raw form.text_area :content, id: :blog_content %>
   </div>
 <legend>Image</legend>
 <%= form.file_field :image %>
