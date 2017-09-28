@@ -63,8 +63,9 @@
            <h2><small><%= blog.title %></small></h2>
            <h5><span class="glyphicon glyphicon-time"></span> Post by Sheen, Sep 22, 2017.</h5>
       <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-           <%=raw blog.content %></br>
-    <% end %>
+           <%= strip_tags(markdown truncate(blog.content, length: 100)) %></br>
+          <%= image_tag(blog.image_url, :width => 250, :height => 170) %>
+          <% end %>
     <hr>
 
       <h4>Leave a Comment:</h4>
